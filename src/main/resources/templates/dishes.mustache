@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <form method="post">
+            <input type="text" name="name" placeholder="Введите название блюда">
+            <input type="text" name="composition" placeholder="Введите состав блюда">
+            <input type="text" name="nutrients" placeholder="Введите нутриенты блюда">
+            <input type="hidden" name="_csrf" value="{{_csrf.token}}">
+            <button type="submit">Добавить</button>
+        </form>
+    </div>
+
+    <div>Список созданных блюд</div>
+    {{#dishes}}
+        <div>
+            <b>{{id}}</b>
+            <b>{{name}}</b>
+            <b>{{composition}}</b>
+            <b>{{nutrients}}</b>
+            <b>{{author}}</b>
+        </div>
+
+    {{/dishes}}
+</body>
+</html>

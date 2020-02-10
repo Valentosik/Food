@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<div>
+
+</div>
+
+<div>Список созданных блюд</div>
+{{#dishes}}
+    <div>
+        <b>{{id}}</b>
+        <b>{{name}}</b>
+        <b>{{composition}}</b>
+        <b>{{nutrients}}</b>
+        <b>{{author}}</b>
+    </div>
+
+{{/dishes}}
+
+<p>asdzxc</p>
+
+{{#dishes1}}
+<div>
+    <b>{{id}}</b>
+    <b>{{name}}</b>
+    <b>{{composition}}</b>
+    <b>{{nutrients}}</b>
+    <b>{{author}}</b>
+</div>
+{{/dishes1}}
+
+
+
+
+
+
+{{#dishes2}}
+
+    <div>
+        <div class="card">
+            <h5 class="card-header">Название блюда <b>{{id}}</b> <b>{{name}}</b> </h5>
+            <div class="card-body">
+                <h5 class="card-title">ингридиенты         <b>{{composition}}</b></h5>
+                <p class="card-text">Еще ингридиенты         <b>{{nutrients}}</b>         <b>{{author}}</b></p>
+                <a href="#" class="btn btn-primary">Добавить ингридиент</a>
+                <a href="#" class="btn btn-primary">Сохранить</a>
+            </div>
+        </div>
+    </div>
+{{/dishes2}}
+
+</body>
+</html>
