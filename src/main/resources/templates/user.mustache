@@ -6,6 +6,9 @@
 </head>
 <body>
 <div>Список созданных блюд</div>
+
+
+<p>Пользователь</p>
 {{#user}}
     <div>
         <b>{{id}}</b>
@@ -16,5 +19,30 @@
 
 {{/user}}
 
+
+<p>Список пользователей</p>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Role</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#users}}
+        <tr>
+            <td>{{username}}</td>
+            <td>{{id}}</td>
+            {{#roles}}
+                <td>{{.}}</td>
+                <td><a href="/user/{{id}}">edit</a></td>
+            {{/roles}}
+
+
+        </tr>
+    {{/users}}
+    </tbody>
+</table>
 </body>
 </html>

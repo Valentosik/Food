@@ -1,0 +1,16 @@
+<html>
+<body>
+    <p>User editor</p>
+    <form action="/user" method="post">
+        <input type="text" name="username" value="{{user.username}}">
+        {{#roles}}
+            <div>
+                <label><input type="checkbox" name="{{.}}"> {{.}}</label>
+            </div>
+        {{/roles}}
+        <input type="hidden" value="{{user.id}}" name="userId">
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}">
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
